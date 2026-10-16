@@ -1,0 +1,17 @@
+{
+  "name": "dasher-app",
+  "version": "1.0.0",
+  "description": "Sample Node.js app for practicing CI/CD with GitHub Actions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test --test-reporter=spec --test-reporter-destination=stdout --test-reporter=junit --test-reporter-destination=test-results.xml test.js",
+    "coverage": "c8 --reporter=text --reporter=html --check-coverage --lines 90 node --test test.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "c8": "^10.1.3"
+  }
+}
